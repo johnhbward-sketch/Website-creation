@@ -1,0 +1,14 @@
+import qrcode
+url = input("Enter the URL: ").strip()
+
+file_path = "/Users/johnnyward/Desktop//qrcode.png" 
+
+qr = qrcode.QRCode()
+qr.add_data(url)
+
+img = qr.make_image()
+img.save(file_path)
+
+print("QR Code was generated! ")
+
+# such as https://open.spotify.com/album/6o86bV7TAt5x4exc2qLDqC 
